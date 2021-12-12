@@ -33,7 +33,7 @@ class WeblogParser
     end
     puts "List of webpages with most unique page views:"
     sorted_by_uniq_page_views.each do |page_view|
-      puts [page_view.path, page_view.count].join(" ")
+      puts [page_view.path, page_view.uniq_count].join(" ")
     end
   end
 end
