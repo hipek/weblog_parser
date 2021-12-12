@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'log_file_parser'
+require 'log_file_reader'
 
-RSpec.describe 'LogFileParser' do
-  subject { LogFileParser.new('spec/fixtures/example.log') }
+RSpec.describe LogFileReader do
+  subject { LogFileReader.new('spec/fixtures/example.log') }
 
   context 'each_pair' do
     it 'iterates over each line' do

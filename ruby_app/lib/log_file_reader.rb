@@ -1,8 +1,8 @@
-class LogFileParser
-  attr_accessor :file
+class LogFileReader
+  attr_reader :file
 
   def initialize(file)
-    self.file = file
+    @file = file
   end
 
   def each_pair
