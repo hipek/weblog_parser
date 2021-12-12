@@ -18,4 +18,21 @@ RSpec.describe 'WeblogParser' do
       expect(subject.page_views.size).to eql 4
     end
   end
+
+  context 'page views' do
+    before { subject.parse! }
+
+    context 'sorted by page view' do
+      let(:sorted_page_views) { subject.sorted_by_page_views }
+
+      it 'returns sorted list' do
+        expect(sorted_page_views[0].path).to eql "/home"
+        expect(sorted_page_views[0].count).to eql 3
+      end
+    end
+
+    context 'sorted by uniq page views' do
+      it 'returns sorted list'
+    end
+  end
 end
