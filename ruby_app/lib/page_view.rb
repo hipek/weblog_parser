@@ -9,8 +9,8 @@ class PageView
   end
 
   def add_address(address)
-    @addresses.append(address)
-    @count = @addresses.size
-    @uniq_count = @addresses.uniq.size
+    addresses.append(address)
+    @count = addresses.size
+    @uniq_count = addresses.uniq.size
   end
 end
