@@ -12,7 +12,7 @@ RSpec.describe LogFileReader do
         result += [path, address]
       end
 
-      expect(result.size).to eql(12)
+      expect(result.size).to eql(14)
     end
   end
 end
