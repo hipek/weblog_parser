@@ -39,5 +39,12 @@ RSpec.describe 'WeblogParser' do
         expect(sorted_page_views[0].uniq_count).to eql 2
       end
     end
+
+    context "display results" do
+      it do
+        expect(subject).to receive(:puts).exactly(10).times
+        subject.display_results
+      end
+    end
   end
 end
