@@ -32,7 +32,12 @@ RSpec.describe 'WeblogParser' do
     end
 
     context 'sorted by uniq page views' do
-      it 'returns sorted list'
+      let(:sorted_page_views) { subject.sorted_by_uniq_page_views }
+
+      it 'returns sorted list' do
+        expect(sorted_page_views[0].path).to eql "/home"
+        expect(sorted_page_views[0].uniq_count).to eql 2
+      end
     end
   end
 end

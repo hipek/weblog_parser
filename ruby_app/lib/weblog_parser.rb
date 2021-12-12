@@ -19,6 +19,10 @@ class WeblogParser
   end
 
   def sorted_by_page_views
-    @page_views.values.sort_by(&:count).reverse
+    page_views.values.sort_by(&:count).reverse
+  end
+
+  def sorted_by_uniq_page_views
+    page_views.values.sort_by(&:uniq_count).reverse
   end
 end
